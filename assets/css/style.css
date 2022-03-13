@@ -1,3 +1,4 @@
+/* Root color */
 :root{
     background-color: red
     }
@@ -29,7 +30,7 @@
     input{
         text-align: center;
     }
-    
+/* container */
     .container {
         width: 100vw;
         height: 100vh;
@@ -39,7 +40,7 @@
         max-width: 80rem;
         margin: 0 auto;
       }
-    
+/* button */
       button {
         display: flex;
         align-items: center;
@@ -59,7 +60,7 @@
       button:hover{
           box-shadow: 6px 6px 6px #030303;
       }
-    
+/* start page */
     #startpage{
         display: flex;
         flex-direction: column;
