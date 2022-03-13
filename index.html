@@ -4,22 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>The Code Quiz</title>
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body>
     <div class="container">
+        <!-- Landing Page  -->
         <div id="startpage">
-            <h2>Welcome to my quiz</h2>
-            <h3>This multiple-choice quiz is very hard</h3>
+            <h2>Welcome to the Code Quiz</h2>
+            <p>Good Luck! Choose the right answer from the multiple choice. Choose wrong and points are deducted</p>
             <button id="startBtn">Start</button>
         </div>
 
+
+
+
+  <!-- Question & Options -->
         <div id="quiz">
-            <div id="timer">Time left: </div>
+            <div id="timer">Time remaining: </div>
             <div id="questions">
-                <p>Questions Placeholder</p>
+                <p>Questions</p>
             </div>
             <button id="a" onclick="checkAnswer('a')">A</button>
             <button id="b" onclick="checkAnswer('b')">B</button>
@@ -28,13 +33,22 @@
             <div id="result"></div>
         </div>
 
+
+
+
+  <!-- Final Score  -->
         <div id="gameover">
             <div id="finalScore"></div>
-            <input type="text" size="51" placeholder="Please enter your name initials to display your score"
+            <input type="text" size="51" placeholder="Please enter your initials to display your score"
                 name="intials" id="initials" />
-            <button id="submitScore">Submit Score</button>
+            <button id="submitScore">Submit</button>
         </div>
 
+
+
+
+
+  <!-- High Scores  -->
         <div id=highscoreContainer>
             <div id="high-scorePage">
                 <div id="highscore-header">
@@ -45,6 +59,10 @@
                 <div id="highscore-score"></div>
             </div>
 
+
+
+
+          <!-- Choices  -->
             <div id="endGameBtns">
                 <button id="playAgain" onclick="replayQuiz()">Play Again</button>
                 <button id="clearHighscore" onclick="clearScore()">Clear Scores</button>
