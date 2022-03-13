@@ -10,8 +10,8 @@ A smooth and working quiz that generates questions and options for the user to c
 
 ## ScreenShot
 
-![Starting Page]()
+![Starting Page](./assets/startscreen.png)
 
-![Questions]()
+![Questions](./assets/questions.png)
 
-![Scores]()
+![Scores](./assets/scores.png)
