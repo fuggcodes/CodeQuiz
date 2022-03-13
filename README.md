@@ -8,3 +8,10 @@ A smooth and working quiz that generates questions and options for the user to c
 
 [Deployed](https://fuggcodes.github.io/CodeQuiz/)
 
+## ScreenShot
+
+![Starting Page]()
+
+![Questions]()
+
+![Scores]()
