@@ -1,4 +1,4 @@
-// Getting elements
+// Getting elements from html reference 
 const quizBody = document.getElementById("quiz");
 const resultsEl = document.getElementById("result");
 const finalScoreEl = document.getElementById("finalScore");
@@ -19,7 +19,7 @@ const buttonB = document.getElementById("b");
 const buttonC = document.getElementById("c");
 const buttonD = document.getElementById("d");
 
-//Quiz questions and correct answers
+//Quiz questions options and answer 
 const quizQuestions = [{
     question: "What are variables?",
     choiceA: "Containers for storing data values.",
@@ -62,7 +62,7 @@ const quizQuestions = [{
 },
 ];
 
-// Variables
+// Variables to tract the quiz and time 
 var finalQuestionIndex = quizQuestions.length;
 var currentQuestionIndex = 0;
 var timeLeft = 60;
@@ -70,7 +70,7 @@ var timerInterval;
 var score = 0;
 var correct;
 
-// Question generation
+// Create the question 
 function generateQuizQuestion() {
     gameoverDiv.style.display = "none";
     if (currentQuestionIndex === finalQuestionIndex) {
@@ -84,7 +84,7 @@ function generateQuizQuestion() {
     buttonD.innerHTML = currentQuestion.choiceD;
 };
 
-// Start quiz 
+// Start quiz, start time, clear the DOM, unhide questions 
 function startQuiz() {
     gameoverDiv.style.display = "none";
     startQuizDiv.style.display = "none";
@@ -103,7 +103,7 @@ function startQuiz() {
     quizBody.style.display = "block";
 }
 
-// Show quiz score
+// display quiz score/stop the timer
 function showScore() {
     quizBody.style.display = "none"
     gameoverDiv.style.display = "flex";
@@ -115,10 +115,12 @@ function showScore() {
 // Record score with name initials
 submitScoreBtn.addEventListener("click", function highscore() {
 
-
+// Making sure input is not empty
     if (highscoreInputName.value === "") {
         alert("Initials cannot be blank");
         return false;
+
+// get local storage 
     } else {
         var savedHighscores = JSON.parse(localStorage.getItem("savedHighscores")) || [];
         var currentUser = highscoreInputName.value.trim();
@@ -131,13 +133,13 @@ submitScoreBtn.addEventListener("click", function highscore() {
         highscoreContainer.style.display = "flex";
         highscoreDiv.style.display = "block";
         endGameBtns.style.display = "flex";
-
+// send to local storage 
         savedHighscores.push(currentHighscore);
         localStorage.setItem("savedHighscores", JSON.stringify(savedHighscores));
         generateHighscores();
     }
 });
-
+// get local storage, display high score "persistent data" 
 function generateHighscores() {
     highscoreDisplayName.innerHTML = "";
     highscoreDisplayScore.innerHTML = "";
@@ -152,8 +154,8 @@ function generateHighscores() {
     }
 }
 
-// Scores and initials display
-function showHighscore() {
+// show scores and initials display
+function highScoreDisplay() {
     startQuizDiv.style.display = "none"
     gameoverDiv.style.display = "none";
     highscoreContainer.style.display = "flex";
