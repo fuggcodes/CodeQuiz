@@ -66,7 +66,7 @@
         flex-direction: column;
         align-items: center;
     }
-    
+/* timer */
     #timer{
         font-family: sans-serif;
         background-color: #030a61;
@@ -77,15 +77,15 @@
         margin-left: auto;
         margin-right: auto;
     }
-
+/* quiz */
     #quiz {
         display: none;
     }
-    
+/* end score */
     #result {
         display: none;
     }
-    
+/* endgame & high score */ 
     #gameover {
         text-align: center;
         display: none;
@@ -127,7 +127,7 @@
         justify-content: center;
         color: rgb(158, 11, 11)
     }
-    
+/* initals input box */   
     #initials{
         margin: .5rem;
         height: 1.75rem;
@@ -153,7 +153,7 @@
         font-family: sans-serif;
         font-weight: bold;
     }
-    
+/* end game buttons */   
     #endGameBtns{
         display: flex;
         align-items: center;
